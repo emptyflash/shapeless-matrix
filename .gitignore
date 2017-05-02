@@ -1,1 +1,4 @@
-.ensime .ensime_cache/ target/ project/target
+.ensime 
+.ensime_cache/ 
+target/ 
+project/target
