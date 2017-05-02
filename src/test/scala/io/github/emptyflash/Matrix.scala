@@ -80,5 +80,20 @@ class MatrixSpec extends FunSpec with Matchers {
         result.unsizedMatrix should be (expected.unsizedMatrix)
       }
     }
+
+    describe("subtract") {
+      it("should subtract one matrix from another") {
+        val matrix = new Matrix[Int, _2, _2](Sized(
+          Sized(1, 1),
+          Sized(1, 1)
+        ))
+        val expected = new Matrix[Int, _2, _2](Sized(
+          Sized(0, 0),
+          Sized(0, 0)
+        ))
+        val result = matrix - matrix
+        result.unsizedMatrix should be (expected.unsizedMatrix)
+      }
+    }
   }
 }
