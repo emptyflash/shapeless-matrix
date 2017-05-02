@@ -50,7 +50,7 @@ package object matrix {
       ensureSized[M, O](multiplied)
     }
 
-    def add[L <: HList](other: Matrix[A, M, N])(implicit n: Numeric[A]): Matrix[A, M, N] = {
+    def +(other: Matrix[A, M, N])(implicit n: Numeric[A]): Matrix[A, M, N] = {
       import n._
       ensureSized[M, N](
         underlying

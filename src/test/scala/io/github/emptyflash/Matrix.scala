@@ -57,8 +57,8 @@ class MatrixSpec extends FunSpec with Matchers {
         ))
         val other = new Matrix[Int, _3, _2](Sized(
           Sized(1, 2),
-          Sized(1, 2),
-          Sized(4, 5)
+          Sized(3, 4),
+          Sized(5, 5)
         ))
         val result = matrix * other
         result.rows should be (2)
@@ -76,7 +76,7 @@ class MatrixSpec extends FunSpec with Matchers {
           Sized(2, 2),
           Sized(2, 2)
         ))
-        val result = matrix.add(matrix)
+        val result = matrix + matrix
         result.unsizedMatrix should be (expected.unsizedMatrix)
       }
     }
