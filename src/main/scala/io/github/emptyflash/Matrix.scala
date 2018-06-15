@@ -49,7 +49,7 @@ package object matrix {
       Matrix.ensureSized[A, M, O](multiplied)
     }
 
-    def zip(other: Matrix[A, M, N]): Matrix[(A, A), M, N] =
+    private def zip(other: Matrix[A, M, N]): Matrix[(A, A), M, N] =
       Matrix.ensureSized[(A, A), M, N](
         underlying
           .zip(other.underlying)
